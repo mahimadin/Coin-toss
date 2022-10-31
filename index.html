@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin toss</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="box">
+
+        <center>
+            <h1>Coin toss</h1>
+            <button id="flip" type="button">Flip the coin</button>
+            <div id="result"></div>
+
+        </center>
+
+    </div>
+
+    <script>
+
+        let button = document.getElementById("flip");
+        let result = document.getElementById("result");
+
+        function fnClick(event) {
+            let num = Math.random();
+
+            if (num < 0.5) {
+                result.innerHTML = "<img src='coin head.png'><br><br><h3>You got Head</h3>";
+            } else {
+                result.innerHTML = "<img src='coin tail.png'><br><br><h3>You got Tail</h3>";
+            }
+        }
+
+        button.addEventListener("click", fnClick);
+        
+    </script>
+
+</body>
+
+</html>
